@@ -9,8 +9,9 @@
   <body>
     
     <?php
-      include "nav.html";
+      require_once "nav.html";
       require_once "funcoes.php";
+      exibirData();
     ?>
 
 
