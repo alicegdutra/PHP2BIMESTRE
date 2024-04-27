@@ -14,9 +14,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-danger">
-
-                    </button>
+                    <button type="submit" class="btn btn-danger">Enviar</button>
                 </div>
             </div>
             
