@@ -11,7 +11,7 @@
 
     $menor_valor = menorValor($valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor7);
 
-    echo "O menor valor é $menor_valor no índice $i!";
+    echo "O menor valor é {$menor_valor[0]} no índice {$menor_valor[1]}!";
 ?>
 
 

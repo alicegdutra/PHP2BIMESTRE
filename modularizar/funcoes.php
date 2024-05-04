@@ -63,7 +63,8 @@ function menorValor($valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor
         $i = 7;
     }
 
-    return $menor_valor; // Retorna o menor valor encontrado
+    return array($menor_valor, $i); // Retorna o menor valor encontrado
+}
 
 function calcularSoma($valor, $valor2) {
     $soma = $valor + $valor2;
@@ -74,4 +75,34 @@ function calcularSoma($valor, $valor2) {
     }
 }
 
+function multiplicacao($valor) {
+    $resposta = array();
+    for ($cont = 0; $cont < 11; $cont++) {
+        $mult = $valor * $cont;
+        $resposta[] = "$valor x $cont = $mult";
+    }
+    return $resposta;
+}
+
+function calcularFatorial($numero) {
+    $fatorial = 1;
+    $r = "";
+    for ($i = 1; $i <= $numero; $i++) {
+        $fatorial *= $i;
+        $r .= "$i ";
+        if ($i < $numero) {
+            $r .= "x ";
+        }
+    }
+    $r .= "= $fatorial";
+    return $r;
+}
+
+function ordenarValores($valorA, $valorB) {
+    if ($valorA > $valorB)
+        return "Valores em ordem crescente: $valorB - $valorA";
+    elseif ($valorB > $valorA)
+        return "Valores em ordem crescente: $valorA - $valorB";
+    else
+        return "Números iguais: $valorA. Insira os números novamente.";
 }
