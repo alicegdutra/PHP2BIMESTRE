@@ -106,3 +106,16 @@ function ordenarValores($valorA, $valorB) {
     else
         return "Números iguais: $valorA. Insira os números novamente.";
 }
+
+function converterCm($valor){
+    $cm = $valor*100;
+    echo "$valor m, em centímeros, equivale a : $cm cm";
+}
+
+function calcularArea($a){
+    $tinta = ($a / 3);
+    $lata = ceil($tinta/18); //ceil - arredonda para cima
+    $total = ($lata * 80);
+    echo "A quantidade de lata(s) de tinta necessária(s) são: $lata<br>";
+    echo "Preço total: R$ ".number_format($total, 2, ',', '.');
+}
