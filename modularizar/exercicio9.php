@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="exercicio8resp.php" method="post">
+            <form action="exercicio9resp.php" method="post">
                 <div class="form-group">
                     <label>Informe o valor :</label>
                     <input type="text" class="form-control" name="valor">

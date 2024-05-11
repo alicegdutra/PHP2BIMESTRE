@@ -3,10 +3,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form action="exercicio8resp.php" method="post">
+            <form action="exercicio6resp.php" method="post">
                 <div class="form-group">
-                    <label>Informe o valor :</label>
-                    <input type="text" class="form-control" name="valor">
+                    <label>Informe o valor peso:</label>
+                    <input type="text" class="form-control" name="valorA">
+                    <label>Informe o valor da altura:</label>
+                    <input type="text" class="form-control" name="valorB">
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </form>

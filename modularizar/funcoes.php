@@ -112,10 +112,28 @@ function converterCm($valor){
     echo "$valor m, em centímeros, equivale a : $cm cm";
 }
 
-function calcularArea($a){
-    $tinta = ($a / 3);
-    $lata = ceil($tinta/18); //ceil - arredonda para cima
-    $total = ($lata * 80);
-    echo "A quantidade de lata(s) de tinta necessária(s) são: $lata<br>";
+
+function calcularArea($area){
+    $tintaL = $area / 3;
+    $latas = ($tintaL/18);
+    $total = $latas * 80; 
+    echo "A quantidade de lata(s) de tinta necessária(s): $latas<br>";
     echo "Preço total: R$ ".number_format($total, 2, ',', '.');
 }
+
+
+
+function dataAniversario($valor){
+        $anoatual = 2024;
+        $idade = $anoatual - $valor;
+        $dias = $idade * 365;
+        $idade2 = 2025 - $valor;
+}
+
+    function calcularImc($valor1, $valor2){
+        $imc = $valor1 / ($valor2**2);
+        echo "o valor do IMC é: $imc";
+        echo "<a href='https://www.programasaudefacil.com.br/calculadora-de-imc'> Leia mais </a>";
+}
+
+?>
