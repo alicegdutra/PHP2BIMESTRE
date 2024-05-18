@@ -7,6 +7,12 @@
     <div class="row">
         <div class="col">
             <label for="nome" class="form-label">Informe o nome: </label>
+            <input type="text" class="form-control" name="nome">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="nome" class="form-label">Informe a descrição: </label>
             <input type="text" class="form-control" name="descricao">
         </div>
     </div>
@@ -22,7 +28,7 @@
                 <?php
                     $linhas = retornarCategorias();
                     while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
-                        echo "<option value='{$l['id']}'>{['descricao']}</option>";
+                        echo "<option value='{$l['id']}'>{$l['descricao']}</option>";
                     }
                 ?>
             </select>
@@ -42,7 +48,11 @@
         $valor = $_POST['valor'];
         $categoria = $_POST['categoria'];
         if($nome != "" && $descricao != "" && $valor != "" && $categoria != ""){
-            #inserirProduto();
+            if(inserirProduto($nome, $descricao, $valor, $categoria))
+                echo "Registro inserido com sucesso!";
+
+            else
+                echo "Erro ao inserir produto!";
         } else {
             echo"Preencha todos os campos!";
         }

@@ -14,36 +14,23 @@
             </tr>
         </thead>
         <tbody>
+            <?php
+                $linhas = retornarProdutos();
+                while ($l = $linhas->fetch(PDO::FETCH_ASSOC)){
+            ?>
             <tr>
-                <td>Persuasão</td>
-                <td>Livro de Jane Austen</td>
-                <td>R$10,00</td>
-                <td>Romance</td>
+                <td><?= $l['nome'] ?></td>
+                <td><?= $l['descricao'] ?></td>
+                <td><?= $l['valor'] ?></td>
+                <td><?= $l['categoria'] ?></td>
                 <td>
                     <a href="alterar_produto.php" class="btn btn-warning">Alterar</a>
                     <a href="excluir_produto.php" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
-            <tr>
-                <td>Um corpo na Biblioteca</td>
-                <td>Livro de Agatha Christie</td>
-                <td>R$20,00</td>
-                <td>Mistério</td>
-                <td>
-                    <a href="alterar_produto.php" class="btn btn-warning">Alterar</a>
-                    <a href="excluir_produto.php" class="btn btn-danger">Excluir</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Hobbit</td>
-                <td>Livro de J. R. R. Tolkien</td>
-                <td>R$50,00</td>
-                <td>Fantasia</td>
-                <td>
-                    <a href="alterar_produto.php" class="btn btn-warning">Alterar</a>
-                    <a href="excluir_produto.php" class="btn btn-danger">Excluir</a>
-                </td>
-            </tr>
+            <?php
+                }
+            ?>
         </tbody>
 
     </table>
