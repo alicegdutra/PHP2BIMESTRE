@@ -1,5 +1,5 @@
 <?php
-    require_once("../cabecalho2.html");
+    require_once("../cabecalho2.php");
 ?>
 
 <h3>Excluir Produtos</h3>

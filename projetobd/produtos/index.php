@@ -1,5 +1,5 @@
 <?php
-    require_once("../cabecalho2.html");
+    require_once("../cabecalho2.php");
 ?>
     <h3>Gerenciamento de Produtos</h3>
     <a href="inserir_produto.php" class="btn btn-primary mt-3">Adicionar Produto</a>
