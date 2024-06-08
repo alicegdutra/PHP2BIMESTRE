@@ -33,15 +33,14 @@
     <div class="row">
         <div class="col">
             <label for="nome" class="form-label">Informe o nome: </label>
-            <input type="text" class="form-control" name="descricao">
-                value ="<?= $dados['nome']?>"
+            <input type="text" class="form-control" name="descricao" value="<?= $dados['descricao'] ?>">
         </div>
     </div>
     <div class="row">
         <div class="col">
             <label for="valor" class="form-label">Informe o valor: </label>
-            <input type="text" class="form-control" name="valor">
-                value ="<?= $dados['valor']?>
+            <input type="text" class="form-control" name="valor" 
+                    value="<?= $dados['valor'] ?>">
         </div>
     <div class="row">
         <div class="col">
