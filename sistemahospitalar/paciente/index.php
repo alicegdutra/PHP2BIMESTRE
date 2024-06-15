@@ -28,12 +28,8 @@
                 <td><?= $l['data_nascimento'] ?> 
                 
                 <td>
-                    <a href="alterar_paciente.php?id=<?= $l['id'] ?>" class="btn btn-success">
-                        Alterar
-                    </a>
-                    <a href="excluir_paciente.php?id=<?= $l['id'] ?>" class="btn btn-danger">
-                        Excluir
-                    </a>
+                    <a href="alterar_paciente.php?id=<?= $l['id'] ?>" class="btn btn-success">Alterar</a>
+                    <a href="excluir_paciente.php?id=<?= $l['id'] ?>" class="btn btn-danger">Excluir</a>
                 </td> 
             </tr>
             <?php

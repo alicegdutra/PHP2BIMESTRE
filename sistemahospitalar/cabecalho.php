@@ -52,13 +52,13 @@
               <a class="nav-link" href="/PHP2BIMESTRE/sistemahospitalar/medico/index.php">Médicos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/PHP2BIMESTRE/sistemahospitalar/consulta/excluir_consulta.php">Consultas</a>
+              <a class="nav-link" href="/sistemahospitalar/consulta/excluir_consulta.php">Consultas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/PHP2BIMESTRE/sistemahospitalar/exame/index.php">Exames</a>
+              <a class="nav-link" href="/sistemahospitalar/exame/index.php">Exames</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/PHP2BIMESTRE/sistemahospitalar/paciente/index.php">Pacientes</a>
+              <a class="nav-link" href="/sistemahospitalar/paciente/index.php">Pacientes</a>
             </li>
           </ul>
         </div>

@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <label for="estilo_musical" class="form-label">Informe a data de nascimento</label>
-            <input type ="date" class="form-control" name="data"> 
+            <input type ="date" class="form-control" name="data_nascimento"> 
         </div>
     
         <div class="row"> 
