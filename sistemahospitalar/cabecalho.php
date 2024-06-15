@@ -21,6 +21,22 @@
       .container {
         margin-top: 2rem;
       }
+
+      form {
+        padding: 20px;
+      }
+
+      form div {
+        margin: 10px 0px;
+      }
+
+      .form-control {
+        width: 400px;
+      }
+
+      h3 {
+        margin: 20px;
+      }
     </style>
   </head>
   <body>
