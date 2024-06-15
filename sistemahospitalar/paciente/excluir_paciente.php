@@ -1,58 +1,38 @@
 <?php
-    require_once("../cabecalho2.php");
+    require_once("../cabecalho.php");
     session_start();
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $_SESSION['id'] = $id;
-
-    }
+    } 
     if ($_POST){
         $id = $_SESSION['id'];
-        if(excluirProduto($_SESSION['id']))
+        if(excluirPaciente($_SESSION['id']))
             header('Location: index.php');
         else
-            echo "Erro ao excluir o registro!";
+            echo "Erro ao excluir o paciente!";
     }
-    $dados = consultarProdutoId($id);
-
-
+    $dados = consultarPacienteId($id);
 ?>
 
-<h3>Excluir Paciente</h3>
-    <form action="excluir_paciente.php" method="POST">
+    <h3>Excluir Paciente</h3>
+    <form action="excluirpaciente.php" method="POST">
         <div class="row">
             <div class="col">
-                <label for="nome" class="form-label">Informe o nome</label>
-                <input type="text" class="form-control" name="nome" disabled
-                    value="<?= $dados['nome'] ?>">
+                <label for="titulo" class="form-label">Informe o nome</label>
+                <input type="text" class="form-control" name="nome" disabled value="<?= $dados['nome'] ?>">
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <label for="descricao" class="form-label">Informe a descrição</label>
-                <input type="text" class="form-control"     name="descricao" value="<?= $dados['descricao'] ?>" disabled>
+                <label for="instrumento" class="form-label">Informe o Endereço</label>
+                <input type="text" class="form-control"   name="endereco" value="<?= $dados['endereco'] ?>" disabled>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <label for="valor" class="form-label">Informe o valor</label>
-                <input type="text" class="form-control" name="valor" value="<?= $dados['valor'] ?>" disabled>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <label for="categoria" class="form-label"> Selecione a categoria</label>
-                <select class="form-select" name="categoria" disabled>
-                    <?php
-                       $linhas = retornarCategorias();
-                       while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
-                        if ($l['id'] == $dados["categoria_id"])
-                            echo "<option selected value='{$l['id']}'>{$l['descricao']}</option>"; 
-                        else 
-                            echo "<option value='{$l['id']}'>{$l['descricao']}</option>"; 
-                       } 
-                    ?>
-                </select>
+                <label for="estilo" class="form-label">Informe a Data de Nascimento</label>
+                <input type="date" class="form-control" name="estilo" value="<?= $dados['data_nascimento'] ?>" disabled>
             </div>
         </div>
         <div class="row">
@@ -63,5 +43,4 @@
     </form>
 
 <?php
-    
-    require_once("../rodape2.html");
+    require_once("../rodape.html");

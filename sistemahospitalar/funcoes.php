@@ -54,5 +54,17 @@
         }         
 
     }
+
+    function excluirPaciente($id){
+        try{ 
+            $sql = "DELETE FROM paciente WHERE id = :id";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":id", $id);
+            return $stmt->execute();
+        } catch (Exception $e){
+            return 0;
+        }
+    }
 ?>
     

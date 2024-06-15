@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col">
                 <label for="data_nascimento" class="form-label">Informe a data de nascimento</label>
-                <input type="date" class="form-control"     name="data_nascimento" value="<?= $dados['data_nascimento'] ?>">
+                <input type="date" class="form-control" name="data_nascimento" value="<?= $dados['data_nascimento'] ?>">
             </div>
         </div>
         
