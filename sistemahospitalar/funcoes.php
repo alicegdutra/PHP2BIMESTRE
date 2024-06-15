@@ -73,7 +73,7 @@
             $conexao = conectarBanco();
             $stmt = $conexao->prepare($sql);
             $stmt->bindValue(":nome", $nome);
-            $stmt->bindValue(":endereco", $especialidade);
+            $stmt->bindValue(":especialidade", $especialidade);
             $stmt->bindValue(":crm", $crm);
             return $stmt->execute();
         } catch (Exception $e) {
@@ -123,6 +123,16 @@
             $stmt->bindValue(":id", $id);
             return $stmt->execute();
         } catch (Exception $e){
+            return 0;
+        }
+    }
+
+    function retornarExame(){
+        try {
+            $sql = "SELECT e.*, c.data_consulta as consulta FROM exame e INNER JOIN consulta c ON c.id = p.consulta_id";
+            $conexao = conectarBanco();
+            return $conexao->query($sql);
+        } catch (Exception $e) {
             return 0;
         }
     }

@@ -16,7 +16,7 @@
 ?>
 
     <h3>Excluir Médico</h3>
-    <form action="excluirpaciente.php" method="POST">
+    <form action="excluir_medico.php" method="POST">
         <div class="row">
             <div class="col">
                 <label for="nome" class="form-label">Informe o Nome</label>

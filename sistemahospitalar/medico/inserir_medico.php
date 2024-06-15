@@ -19,9 +19,7 @@
     
         <div class="row"> 
             <div class="col">
-                <button type="submit" class="btn btn-success">
-                    Salvar
-                </button>
+                <input type="submit"  value="Salvar" class="btn btn-success">
             </div>    
         </div>
     </form>

@@ -4,7 +4,7 @@
 
 <h3>Gerenciar Médicos</h3>
 
-<a href="/sistemahospitalar/medico/inserir_medico.php" class="btn btn-primary mt-3">Adicionar Paciente</a>
+<a href="/sistemahospitalar/medico/inserir_medico.php" class="btn btn-primary mt-3">Adicionar Médicos</a>
 
 <table class="mt-3 table table-hover table-striped">
     <thead>

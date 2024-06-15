@@ -12,7 +12,7 @@
         $endereco = $_POST['endereco'];
         $data_nascimento = $_POST['data_nascimento'];
         
-        if($nome != "nome" && $endereco != "endereco" && $data_nascimento != "data_nascimento" ){
+        if($nome != "" && $endereco != "" && $data_nascimento != "" ){
             if(alterarPaciente($nome, $endereco, $data_nascimento, $_SESSION['id']))
                 echo "Registro alterado com sucesso!";
             else
