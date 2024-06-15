@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <label for="instrumento" class="form-label">Informe o endereço</label>
+                <label for="endereco" class="form-label">Informe o endereço</label>
                 <input type="text" class="form-control"     name="endereco" value="<?= $dados['endereco'] ?>">
             </div>
         </div>

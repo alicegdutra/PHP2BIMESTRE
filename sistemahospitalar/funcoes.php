@@ -8,7 +8,7 @@
 
     function listarPaciente(){
         $conexao = conectarBanco();
-        return $conexao->query("SELECT * FROM Paciente");
+        return $conexao->query("SELECT * FROM paciente");
     }
 
     function alterarPaciente($nome, $endereco, $data_nascimento, $id){
@@ -66,5 +66,67 @@
             return 0;
         }
     }
+
+    function inserirMedico($nome, $especialidade, $crm){
+        try{
+            $sql = "INSERT INTO medico (nome, especialidade, crm) VALUES (:nome, :especialidade, :crm)";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":nome", $nome);
+            $stmt->bindValue(":endereco", $especialidade);
+            $stmt->bindValue(":crm", $crm);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            return 0;
+        }         
+
+    }
+
+    function listarMedico(){
+        $conexao = conectarBanco();
+        return $conexao->query("SELECT * FROM medico");
+    }
+
+    function alterarMedico($nome, $especialidade, $crm, $id){
+        try{ 
+            $sql = "UPDATE medico SET nome = :nome, especialidade = :especialidade, crm = :crm WHERE id = :id";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":nome", $nome);
+            $stmt->bindValue(":especialidade", $especialidade);
+            $stmt->bindValue(":crm", $crm);
+            $stmt->bindValue(":id", $id);
+            return $stmt->execute();
+        } catch (Exception $e){
+            return 0;
+        }
+    }
+
+    function consultarMedicoId($id){
+        try{ 
+            $sql = "SELECT * FROM medico WHERE id = :id";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":id", $id);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch (Exception $e){
+            return 0;
+        }
+    }
+
+    function excluirMedico($id){
+        try{ 
+            $sql = "DELETE FROM medico WHERE id = :id";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":id", $id);
+            return $stmt->execute();
+        } catch (Exception $e){
+            return 0;
+        }
+    }
+
+
 ?>
     

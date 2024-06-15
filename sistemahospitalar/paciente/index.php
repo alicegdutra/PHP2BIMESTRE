@@ -2,9 +2,9 @@
     require_once("../cabecalho.php");
 ?>
 
-<h3> Gerencia Paciente </h3>
+<h3>Gerenciar Paciente</h3>
 
-<a href="paciente/inserir_paciente.php" class="btn btn-primary mt-3">Adicionar Paciente</a>
+<a href="/sistemahospitalar/paciente/inserir_paciente.php" class="btn btn-primary mt-3">Adicionar Paciente</a>
 
 <table class="mt-3 table table-hover table-striped">
     <thead>
