@@ -10,10 +10,7 @@
             <input type="text" class="form-control" name="data_consulta">
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <label for="categoria" class="form-label">Selecione a categoria: </label>
-            <select class="form-select" name="categoria">
+            <select class="form-select" name="data">
                 <?php
                     $linhas = retornarCategorias();
                     while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
@@ -33,9 +30,8 @@
 <?php
     if($_POST){
         $data_consulta = $_POST['data_consulta'];
-        $categoria = $_POST['categoria'];
-        if($data_consulta != "" && $descricao != "" && $valor != "" && $categoria != ""){
-            if(inserirConsulta($data_consulta, $categoria))
+        if($data_consulta != ""){
+            if(inserirConsulta($data_consulta))
                 echo "Registro inserido com sucesso!";
 
             else

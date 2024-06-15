@@ -36,7 +36,7 @@
               <a class="nav-link" href="/sistemahospitalar/medico/index.php">Médicos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/sistemahospitalar/consulta/index.php">Consultas</a>
+              <a class="nav-link" href="/sistemahospitalar/consulta/excluir_consulta.php">Consultas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/sistemahospitalar/exame/index.php">Exames</a>
