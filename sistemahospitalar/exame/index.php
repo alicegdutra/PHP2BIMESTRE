@@ -12,6 +12,7 @@
             <th>Tipo de Exame</th>
             <th>Resultado</th>
             <th>Consulta</th>
+            <th>Paciente</th>
             <th>Ações</th>
         </tr>
     </thead>
@@ -21,9 +22,9 @@
             while ($l = $linhas->fetch(PDO::FETCH_ASSOC)){
         ?>
         <tr>
-            <td><?= $l['nome'] ?></td>
-            <td><?= $l['resultado'] ?></td>
-            <td><?= $l['consulta'] ?></td>
+            <td><?= $l['tipo_exame'] ?></td>
+            <td><?= $l['resutado'] ?></td>
+            <td><?= $l['consulta'] ?> - <?= $l['paciente'] ?> </td>
             <td>
                 <a href="alterar_exame.php?id=<?= $l['id'] ?>" class="btn btn-warning">Alterar</a>
                 <a href="excluir_exame.php?id=<?= $l['id'] ?>" class="btn btn-danger">Excluir</a>

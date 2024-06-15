@@ -129,12 +129,42 @@
 
     function retornarExame(){
         try {
-            $sql = "SELECT e.*, c.data_consulta as consulta FROM exame e INNER JOIN consulta c ON c.id = p.consulta_id";
+            $sql = "SELECT e.*, c.data_consulta as consulta, p.nome as paciente 
+                        FROM exame e 
+                        INNER JOIN consulta c ON e.consulta_id = c.id
+                        INNER JOIN paciente p ON p.id = c.paciente_id";
             $conexao = conectarBanco();
             return $conexao->query($sql);
         } catch (Exception $e) {
             return 0;
         }
+    }
+
+    function listarConsulta(){
+        try{
+            $sql = "SELECT * FROM consulta";
+            $conexao = conectarBanco();
+            return $conexao->query($sql);
+        }  catch(Exception $e){
+            return 0;
+        }
+    }
+
+        
+    function inserirExame($tipo_exame, $resultado, $consulta){
+        try{
+            $sql = "INSERT INTO exame (tipo_exame, resutado, consulta_id) VALUES (:tipo_exame, :resultado, :consulta)";
+            $conexao = conectarBanco();
+            $stmt = $conexao->prepare($sql);
+            $stmt->bindValue(":tipo_exame", $tipo_exame);
+            $stmt->bindValue(":resultado", $resultado);
+            $stmt->bindValue(":consulta", $consulta);
+            return $stmt->execute();
+        } catch (Exception $e) {
+            echo $e;
+            return 0;
+        }         
+
     }
 
 
